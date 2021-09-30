@@ -20,7 +20,7 @@
   --progress-bar-height: 10px;
   --progress-mask: rgb(55, 0, 255); 
   width: 100%;
-  /* height: 100%; */
+  height: 200px;
 }
 
 .model-view .card model-viewer .poster {
