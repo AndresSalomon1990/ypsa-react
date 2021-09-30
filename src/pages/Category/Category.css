@@ -1,0 +1,34 @@
+.category h3 {
+  color: #737373;
+  font-weight: 300;
+  margin-bottom: 5vh;
+}
+
+.category ul {
+  list-style-type: none;
+}
+
+.category ul li {
+  padding: 0;
+}
+
+.category ul li a {
+  display: block;
+  padding: 10px 0;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid #936738;
+  background-color: #ddd;
+  color: #936738;
+}
+
+.category ul li a:hover {
+  background-color: #936738;
+  color: #ddd;
+}
+
+@media only screen and (max-width: 600px) {
+  .category h3 {
+    font-size: 0.75rem;
+  }
+}

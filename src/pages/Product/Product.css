@@ -1,0 +1,53 @@
+.product h3 {
+  color: #737373;
+  font-weight: 300;
+  margin-bottom: 5vh;
+}
+
+.product ul {
+  list-style-type: none;
+}
+
+.product ul li {
+  padding: 0;
+}
+
+.product ul li a {
+  display: block;
+  padding: 10px 0;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid #936738;
+  background-color: #ddd;
+  color: #936738;
+}
+
+.product ul li a:hover {
+  background-color: #936738;
+  color: #ddd;
+}
+
+.product input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background-color: white;
+  background-image: url('../../logos/search_icon.svg');
+  background-size: 7%;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  margin-bottom: 3vh;
+}
+
+.product input[type=text]:focus {
+  background-color: #ffd1d1;
+}
+
+@media only screen and (max-width: 600px) {
+  .product h3 {
+    font-size: 0.75rem;
+  }
+}
