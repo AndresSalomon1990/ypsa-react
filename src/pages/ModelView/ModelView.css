@@ -20,7 +20,7 @@
   --progress-bar-height: 10px;
   --progress-mask: rgb(55, 0, 255); 
   width: 100%;
-  height: 200px;
+  height: 250px;
 }
 
 .model-view .card model-viewer .poster {
@@ -55,8 +55,8 @@
 }
 
 .model-view .card .suenolar-logo a img {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
 }
 
 @media only screen and (max-width: 600px) {
