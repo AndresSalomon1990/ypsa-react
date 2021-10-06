@@ -4,6 +4,18 @@ import { Link, useParams } from 'react-router-dom';
 import { products } from '../../data/products';
 import { motion } from 'framer-motion';
 
+const h3Variants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
 const ulVariants = {
   initial: { opacity: 0 },
   animate: {
@@ -34,7 +46,9 @@ export default function Product() {
 
   return (
     <div className='product'>
-      <h3>por favor seleccione un producto para verlo en realidad aumentada</h3>
+      <motion.h3 variants={h3Variants} initial='initial' animate='animate'>
+        por favor seleccione un producto para verlo en realidad aumentada
+      </motion.h3>
       {data.length === 0 && <div>Sin productos</div>}
       {data.length > 0 && (
         <div className='list-wrapper'>

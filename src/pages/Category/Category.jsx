@@ -4,6 +4,18 @@ import './Category.css';
 import { categories } from '../../data/categories';
 import { motion } from 'framer-motion';
 
+const h3Variants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
 const ulVariants = {
   initial: { opacity: 0 },
   animate: {
@@ -22,7 +34,9 @@ const liVariants = {
 export default function Category() {
   return (
     <div className='category'>
-      <h3>por favor seleccione una categoría para ver los productos</h3>
+      <motion.h3 variants={h3Variants} initial='initial' animate='animate'>
+        por favor seleccione una categoría para ver los productos
+      </motion.h3>
       <div className='list-wrapper'>
         <motion.ul variants={ulVariants} initial='initial' animate='animate'>
           {categories.map((category) => (
