@@ -47,7 +47,7 @@
 .model-view .card model-viewer .panel-container span {
   font-family: monospace;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .model-view .card model-viewer .panel-container span .zoom-value {
@@ -62,5 +62,11 @@
 @media only screen and (max-width: 600px) {
   .model-view h3 {
     font-size: 0.75rem;
+  }
+
+  .model-view .card model-viewer .panel-container span {
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 0.8rem;
   }
 }

@@ -23,13 +23,15 @@ export default function Category() {
   return (
     <div className='category'>
       <h3>por favor seleccione una categoría para ver los productos</h3>
-      <motion.ul variants={ulVariants} initial='initial' animate='animate'>
-        {categories.map((category) => (
-          <motion.li key={category.id} variants={liVariants}>
-            <Link to={`/${category.uri}`}>{category.name}</Link>
-          </motion.li>
-        ))}
-      </motion.ul>
+      <div className='list-wrapper'>
+        <motion.ul variants={ulVariants} initial='initial' animate='animate'>
+          {categories.map((category) => (
+            <motion.li key={category.id} variants={liVariants}>
+              <Link to={`/${category.route}`}>{category.name}</Link>
+            </motion.li>
+          ))}
+        </motion.ul>
+      </div>
     </div>
   );
 }

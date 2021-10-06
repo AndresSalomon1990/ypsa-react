@@ -33,13 +33,11 @@ export default function Product() {
   }, [category]);
 
   return (
-    <div
-      className='product'
-    >
+    <div className='product'>
       <h3>por favor seleccione un producto para verlo en realidad aumentada</h3>
       {data.length === 0 && <div>Sin productos</div>}
       {data.length > 0 && (
-        <div>
+        <div className='list-wrapper'>
           <input
             type='text'
             placeholder='Buscar productos...'
