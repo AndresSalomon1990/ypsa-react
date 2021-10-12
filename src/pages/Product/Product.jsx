@@ -52,11 +52,14 @@ export default function Product() {
       {data.length === 0 && <div>Sin productos</div>}
       {data.length > 0 && (
         <div className='list-wrapper'>
-          <input
+          <motion.input
             type='text'
             placeholder='Buscar productos...'
             onChange={(e) => setName(e.target.value)}
             value={name}
+            variants={ulVariants}
+            initial='initial'
+            animate='animate'
           />
           <motion.ul variants={ulVariants} initial='initial' animate='animate'>
             {data
