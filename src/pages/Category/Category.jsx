@@ -35,13 +35,13 @@ export default function Category() {
   return (
     <div className='category'>
       <motion.h3 variants={h3Variants} initial='initial' animate='animate'>
-        por favor seleccione una categoría para ver los productos
+        Por favor seleccione una categoría para ver los productos
       </motion.h3>
       <div className='list-wrapper'>
         <motion.ul variants={ulVariants} initial='initial' animate='animate'>
           {categories.map((category) => (
             <motion.li key={category.id} variants={liVariants}>
-              <Link to={`/${category.route}`}>{category.name}</Link>
+              <Link to={`/webar/suenolar/${category.route}`}>{category.name}</Link>
             </motion.li>
           ))}
         </motion.ul>

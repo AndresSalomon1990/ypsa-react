@@ -1,16 +1,17 @@
 .model-view h3 {
   color: #737373;
   font-weight: 300;
-  margin-bottom: 5vh;
+  margin-bottom: 1vh;
+  margin-top: 3vh;
 }
 
 .model-view .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
 
 .model-view .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .model-view .card model-viewer {
@@ -18,9 +19,9 @@
   --poster-color: transparent; /* before model is load */
   --progress-bar-color: rgb(255, 0, 0);
   --progress-bar-height: 10px;
-  --progress-mask: rgb(55, 0, 255); 
+  --progress-mask: rgb(55, 0, 255);
   width: 100%;
-  height: 250px;
+  height: 350px;
 }
 
 .model-view .card model-viewer .poster {
@@ -29,10 +30,54 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background-image: url("../../logos/3Destiny-RA-Iso.png");
+  background-image: url('../../logos/3Destiny-RA-Iso.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/* AR button */
+.model-view .card model-viewer .ar-button {
+  background-image: url('../../logos/RAicon.png');
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: 12px 50%;
+  background-color: #fff;
+  position: absolute;
+  right: 5px;
+  white-space: nowrap;
+  bottom: 5px;
+  padding: 0px 10px 0px 35px;
+  font-family: Roboto Regular, Helvetica Neue, sans-serif;
+  font-size: 12px;
+  color: #000;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 18px;
+  border: 1px solid #dadce0;
+  cursor: pointer;
+}
+
+/* Buy button */
+.model-view .card model-viewer a .buy-button {
+  background-image: url('../../logos/shopicon.png');
+  background-repeat: no-repeat;
+  background-size: 18px 16px;
+  background-position: 12px 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 5px;
+  white-space: nowrap;
+  bottom: 5px;
+  padding: 0px 10px 0px 35px;
+  font-family: Roboto Regular, Helvetica Neue, sans-serif;
+  font-size: 12px;
+  color: #000;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 18px;
+  border: 1px solid #dadce0;
+  cursor: pointer;
 }
 
 /* Zoom value */
@@ -54,10 +99,10 @@
   margin-right: 10px;
 }
 
-.model-view .card .suenolar-logo a img {
+/* .model-view .card .suenolar-logo a img {
   width: 50%;
   height: 50%;
-}
+} */
 
 @media only screen and (max-width: 600px) {
   .model-view h3 {

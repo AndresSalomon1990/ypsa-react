@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './ModelView.css';
 import { useParams } from 'react-router-dom';
 import { zoom } from '../../utils/zoom';
-import logo from '../../logos/sh-logo.png';
+// import logo from '../../logos/sh-logo.png';
 import { motion } from 'framer-motion';
 
 const containerVariants = {
@@ -42,12 +42,12 @@ export default function ModelView() {
       animate='animate'
       exit='exit'
     >
-      <h3>{product.replace(/_/g, ' ')}</h3>
+      <h3>{product.substring(4).replace(/_/g, ' ')}</h3>
       <div className='card'>
         <model-viewer
           id='model'
-          src={`/assets/models/${product}.glb`}
-          ios-src={`/assets/models/${product}.usdz`}
+          src={`/webar/suenolar/assets/models/${product}.glb`}
+          ios-src={`/webar/suenolar/assets/models/${product}.usdz`}
           alt='3D Model'
           auto-rotate
           auto-rotate-delay='1000'
@@ -67,21 +67,22 @@ export default function ModelView() {
           min-field-of-view='15deg'
         >
           <div className='poster' slot='poster'></div>
+          <button className='ar-button' slot='ar-button'>
+            Ver en tu espacio
+          </button>
+          <a
+            href='https://www.suenolarhome.com.py/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <button className='buy-button'>Comprar</button>
+          </a>
           <div className='panel-container'>
             <span>
               Zoom: <span className='zoom-value' id='zoom-value'></span>
             </span>
           </div>
         </model-viewer>
-        <div className='suenolar-logo'>
-          <a
-            href='https://www.suenolarhome.com.py/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <img src={logo} alt='Sueñolar logo' />
-          </a>
-        </div>
       </div>
     </motion.div>
   );

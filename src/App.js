@@ -15,13 +15,13 @@ function App() {
         <Header />
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.key}>
-            <Route path='/:category/:product'>
+            <Route path='/webar/suenolar/:category/:product'>
               <ModelView />
             </Route>
-            <Route path='/:category'>
+            <Route path='/webar/suenolar/:category'>
               <Product />
             </Route>
-            <Route path='/'>
+            <Route path='/webar/suenolar'>
               <Category />
             </Route>
           </Switch>
